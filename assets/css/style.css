@@ -30,14 +30,6 @@ nav ul li a {
     text-align: center;
 }
 
-.cta {
-    background-color: #333;
-    color: white;
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-}
 
 .products {
     display: grid;
@@ -52,8 +44,21 @@ nav ul li a {
     margin: 10px;
     padding: 20px;
     text-align: center;
-    width: 200px;
+   
 }
+.product a {
+    color: #000;
+    text-decoration: none;
+}
+.product a.cta {
+    background-color: #333;
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
 
 .product img {
     width: 100%;
@@ -65,4 +70,7 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+}
+#main-content {
+    min-height: 100vh;
 }

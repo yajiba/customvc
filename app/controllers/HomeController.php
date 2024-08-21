@@ -7,6 +7,7 @@ class HomeController extends Controller
     {
         // Load and render the "home.php" view
         $this->view('home');
+       
     }
 }
 

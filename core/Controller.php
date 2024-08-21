@@ -11,7 +11,9 @@ class Controller
         if (!empty($data)) {
             extract($data);
         }
+        require 'app/views/template/header.php';
         require_once 'app/views/' . $viewName . '.php';
+        require 'app/views/template/footer.php';
     }
 }
 ?>

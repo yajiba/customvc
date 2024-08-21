@@ -1,7 +1,7 @@
 <?php
 // core/Database.php
 
-require 'config.php';
+
 class Database
 {
     private static $connection;
