@@ -1,5 +1,5 @@
 <main>
-    <table>
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Order ID</th>
