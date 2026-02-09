@@ -1,6 +1,6 @@
 <main>
     <section class="hero">
-        <h1>Welcome to Our E-Commerce</h1>
+        <h1>Welcome to Our E-Commerce Updated</h1>
         <p>Discover the latest products and trends</p>
         <a href="#" class="cta">Shop Now</a>
     </section>
