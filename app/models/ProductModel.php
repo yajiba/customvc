@@ -2,7 +2,36 @@
 require_once 'core/Database.php';
 class ProductModel
 {
+    public static function addProduct($post) {
+        $name = $_POST['product_name'];  // Assuming you are getting this from the form
+        $desc = $_POST['description'];   // Assuming you are getting this from the form
+        
+        // Ensure data is sanitized (basic form of sanitation)
+        $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+        $desc = htmlspecialchars($desc, ENT_QUOTES, 'UTF-8');
+        
+        // Connect to the database
+        $db = Database::connect();
+        
+        // Prepare the SQL statement with placeholders to prevent SQL injection
+        $stmt = $db->prepare('INSERT INTO products (name, description) VALUES (:name, :desc)');
+        
+        // Bind the parameters to the prepared statement
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':desc', $desc);
+        
+        // Execute the statement and check if it was successful
+        if ($stmt->execute()) {
+            // Check if the insert was successful, get the last inserted ID (optional)
+            $lastId = $db->lastInsertId();
+           return 1;
+        } else {
+            // If execution fails, show an error
+            return 0;
+        }
+        
     
+    }
     public static function list() {
         // Connect to the database
         $db = Database::connect();

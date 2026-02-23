@@ -16,5 +16,23 @@ class ProductController extends Controller
         $this->view('product_by_cat', ['products' => $product]);
     }
 
+    public function addProductForm(){
+        $this->view('add_product');
+    }
+
+    public function addProduct(){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $product = ProductModel::addProduct($_POST);
+            if($product) {
+                $_SESSION['success'] = "Successfully added";
+             }else{
+                $_SESSION['error'] = "Error";
+             }
+        }
+        $this->view('add_product');
+       
+    }
+
+
     
 }

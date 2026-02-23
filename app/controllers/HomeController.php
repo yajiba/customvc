@@ -9,6 +9,12 @@ class HomeController extends Controller
         $this->view('home');
        
     }
+
+    public function sample()
+    {
+        // Load and render the "sample.php" view
+        $this->view('sample');  
+    }
 }
 
 ?>

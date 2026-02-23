@@ -7,6 +7,8 @@ class Controller
     
     public function view($viewName, $data = [])
     {
+        unset($_SESSION['success']);
+        unset($_SESSION['error']);
         $this->view = $viewName;
         if (!empty($data)) {
             extract($data);
